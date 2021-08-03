@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.performsinnovations">
+    <!-- Permissoes de acesso a internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Permissoes galeria/camera -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.example.performsinnovations.application.Application"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PerformsInnovations">
+        <activity android:name="com.example.performsinnovations.activity.DetalhesImagem"></activity>
+        <activity
+            android:name="com.example.performsinnovations.activity.DetalhesProdutoActivity"
+            android:parentActivityName="com.example.performsinnovations.activity.AnunciosActivity" />
+        <activity android:name="com.example.performsinnovations.activity.CadastrarAnuncioActivity" />
+        <activity
+            android:name="com.example.performsinnovations.activity.MeusAnunciosActivity"
+            android:label="@string/title_activity_meus_anuncios"
+            android:parentActivityName="com.example.performsinnovations.activity.AnunciosActivity" />
+        <activity android:name="com.example.performsinnovations.activity.AnunciosActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.performsinnovations.activity.CadastroActivity" />
+    </application>
+
+</manifest>

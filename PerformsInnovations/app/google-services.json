@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1042224323184",
+    "project_id": "lojavirtualjdc",
+    "storage_bucket": "lojavirtualjdc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042224323184:android:98979dbfb2d0744b3832b5",
+        "android_client_info": {
+          "package_name": "com.example.performsinnovations"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042224323184-olto8hkm2bq6kccs88p74mm21dpave0a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.performsinnovations",
+            "certificate_hash": "461a3b10993c21a4a588be12e914aaa9269c74b4"
+          }
+        },
+        {
+          "client_id": "1042224323184-ij78katcjpeb9k2flun55qg84u8pdbl5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0ysfS-ofj-3LbLOZkUbsgaSMxYG7-lXY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1042224323184-ij78katcjpeb9k2flun55qg84u8pdbl5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
