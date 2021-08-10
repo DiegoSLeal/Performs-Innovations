@@ -59,9 +59,12 @@ dependencies {
     // aumentar o espaço de metodos
             implementation "androidx.multidex:multidex:2.0.1"
 
-    //dependencias para picasso
+    //dependencia para picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
 
-    //dependencias do carousel view
+    //dependencia do carousel view
     implementation 'com.synnapps:carouselview:0.1.5'
+
+    //dependencia floating action menu
+    compile 'com.github.clans:fab:1.6.4'
 }
