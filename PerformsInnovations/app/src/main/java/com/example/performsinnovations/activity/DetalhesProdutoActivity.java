@@ -91,7 +91,7 @@ public class DetalhesProdutoActivity extends AppCompatActivity {
 
         recyclerPropaganda.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false));
         recyclerPropaganda.setHasFixedSize(true);
-        adapterAnuncios = new AdapterAnuncios(listaPropaganda, this);
+        adapterAnuncios = new AdapterAnuncios(listaPropaganda, this, false);
         recyclerPropaganda.setAdapter(adapterAnuncios);
 
         recyclerPropaganda.addOnItemTouchListener(

@@ -112,5 +112,5 @@
         android:onClick="validarDadosAnuncio"
         android:text="Cadastrar anúncio"
         android:textColorHighlight="#FFFFFF"
-        app:backgroundTint="#3F51B5" />
+        app:backgroundTint="#D500F9" />
 </LinearLayout>
