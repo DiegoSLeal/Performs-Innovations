@@ -5,6 +5,7 @@
     <group android:id="@+id/group_logado" android:visible="false">
         <item android:id="@+id/menu_anuncios"
             android:title="Meus anuncios" />
+
         <item android:id="@+id/menu_sair"
             android:title="Sair" />
     </group>

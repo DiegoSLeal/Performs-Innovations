@@ -21,7 +21,7 @@
             android:layout_weight="1"
             android:onClick="filtrarPorEstado"
             android:text="REGIÃO"
-            android:textColor="@color/pink" />
+            android:textColor="@color/blue" />
 
         <TextView
             android:id="@+id/textView3"
@@ -38,7 +38,7 @@
             android:layout_weight="1"
             android:onClick="filtarPorCategoria"
             android:text="CATEGORIA"
-            android:textColor="@color/pink" />
+            android:textColor="@color/blue" />
 
         <TextView
             android:id="@+id/textViewLimpar"
@@ -56,7 +56,7 @@
             android:layout_weight="1"
             android:onClick="limparFiltros"
             android:text="LIMPAR"
-            android:textColor="@color/pink"
+            android:textColor="@color/blue"
             android:visibility="gone"/>
 
     </LinearLayout>

@@ -81,9 +81,9 @@ public class CadastrarAnuncioActivity extends AppCompatActivity implements View.
                 .build();
         dialog.show();
 
-
-         // Salvar imagem no Storage
-
+        /**
+         * Salvar imagem no Storage
+         */
         for(int i = 0; i < listaFotosRecuperadas.size(); i++){
             String urlImagem = listaFotosRecuperadas.get(i);
             int tamanhoLista = listaFotosRecuperadas.size();

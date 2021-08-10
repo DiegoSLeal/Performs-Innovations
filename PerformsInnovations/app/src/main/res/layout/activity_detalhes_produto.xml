@@ -98,7 +98,7 @@
         android:onClick="visualizarTelefone"
         android:text="VER TELEFONE"
         android:textColorHighlight="#FFFFFF"
-        app:backgroundTint="#D500F9" />
+        app:backgroundTint="#3F51B5" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerPropaganda"
