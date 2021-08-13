@@ -1,10 +1,5 @@
 package com.example.performsinnovations.activity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -17,7 +12,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.performsinnovations.R;
 import com.example.performsinnovations.adapter.AdapterAnuncios;
@@ -42,7 +41,7 @@ public class AnunciosActivity extends AppCompatActivity {
     private RecyclerView recyclerAnunciosPublicos;
     private Button buttonRegiao, buttonCategoria, buttonLimpar;
     private AdapterAnuncios adapterAnuncios;
-    private List<Anuncio> listaAnuncios = new ArrayList<>();
+    private List<Anuncio> listaAnuncios = new ArrayList<Anuncio>();
     private DatabaseReference anunciosPublicosRef;
     private AlertDialog dialog;
     private String filtroEstado = "";

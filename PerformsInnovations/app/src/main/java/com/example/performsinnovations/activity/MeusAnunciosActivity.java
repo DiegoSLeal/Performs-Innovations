@@ -54,6 +54,7 @@ public class MeusAnunciosActivity extends AppCompatActivity {
         inicializarComponentes();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
     public void excluirAnuncio(View view){
@@ -120,7 +121,11 @@ public class MeusAnunciosActivity extends AppCompatActivity {
                         this, recyclerAnuncios, new RecyclerItemClickListener.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
-
+                        Anuncio anuncioSelecionado = anuncios.get(position);
+                        Intent intent = new Intent(MeusAnunciosActivity.this, CadastrarAnuncioActivity.class);
+                        intent.putExtra("anuncioSelecionado", anuncioSelecionado);
+                        intent.putExtra("position", position);
+                        startActivity(intent);
                     }
 
                     @Override

@@ -3,6 +3,7 @@ package com.example.performsinnovations.activity;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.Manifest;
 import android.app.Activity;
@@ -15,6 +16,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -23,8 +25,10 @@ import android.widget.Toast;
 
 import com.blackcat.currencyedittext.CurrencyEditText;
 import com.example.performsinnovations.R;
+import com.example.performsinnovations.adapter.AdapterAnuncios;
 import com.example.performsinnovations.helper.ConfiguracaoFirebase;
 import com.example.performsinnovations.helper.Permissoes;
+import com.example.performsinnovations.helper.RecyclerItemClickListener;
 import com.example.performsinnovations.model.Anuncio;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -161,36 +165,44 @@ public class CadastrarAnuncioActivity extends AppCompatActivity implements View.
         anuncio = configurarAnuncio();
         String valor = String.valueOf(campoValor.getRawValue());
 
-    if(listaFotosRecuperadas.size() != 0){
-        if( !anuncio.getEstado().isEmpty() ){
-            if( !anuncio.getCategoria().isEmpty() ){
-                if( !anuncio.getTitulo().isEmpty() ){
-                    if( !valor.isEmpty() && !valor.equals("0") ){
-                        if( !anuncio.getTelefone().isEmpty() ){
-                            if( !anuncio.getDescricao().isEmpty() ){
-                                salvarAnuncio();
-                            }else{
-                                exibirMensagemErro("Preencha o campo descrição!");
+        if (listaFotosRecuperadas.size() != 0) {
+            if (!anuncio.getEstado().isEmpty()) {
+                if (!anuncio.getCategoria().isEmpty()) {
+                    if (!anuncio.getTitulo().isEmpty()) {
+                        if (!valor.isEmpty() && !valor.equals("0")) {
+                            if (!anuncio.getTelefone().isEmpty()) {
+                                if (!anuncio.getDescricao().isEmpty()) {
+
+                                    if(!anuncio.getIdAnuncio().isEmpty() ){
+                                        salvarAnuncio();
+                                    }
+                                    else{
+
+                                    }
+
+                                } else {
+                                    exibirMensagemErro("Preencha o campo descrição!");
+                                }
+                            } else {
+                                exibirMensagemErro("Preencha o campo telefone, digite ao menos 10 números!");
                             }
-                        }else{
-                            exibirMensagemErro("Preencha o campo telefone, digite ao menos 10 números!");
+                        } else {
+                            exibirMensagemErro("Preencha o campo valor!");
                         }
-                    }else{
-                        exibirMensagemErro("Preencha o campo valor!");
+                    } else {
+                        exibirMensagemErro("Preencha o campo título!");
                     }
-                }else{
-                    exibirMensagemErro("Preencha o campo título!");
+                } else {
+                    exibirMensagemErro("Preencha o campo categoria!");
                 }
-            }else{
-                exibirMensagemErro("Preencha o campo categoria!");
+            } else {
+                exibirMensagemErro("Selecione ao menos uma estado!");
             }
-        }else{
-            exibirMensagemErro("Selecione ao menos uma estado!");
-        }
-    }else{
-        exibirMensagemErro("Selecione ao menos uma foto!");
+        } else {
+            exibirMensagemErro("Selecione ao menos uma foto!");
         }
     }
+
     private void exibirMensagemErro(String mensagem) {
         Toast.makeText(this, mensagem, Toast.LENGTH_SHORT).show();
     }

@@ -74,7 +74,7 @@ public class DetalhesProdutoActivity extends AppCompatActivity {
                         }
                     }
                 }
-                //PRECISA ARRUMAR, EXCLUIR ITEM DO CARROCEU ANUNCIO
+                //PRECISA ARRUMAR, EXCLUIR ITEM DO CARROCEU ANUNCIO - pendente
                 //listaPropaganda.remove(posicao);
                 Collections.reverse(listaPropaganda);
                 adapterAnuncios.notifyDataSetChanged();
